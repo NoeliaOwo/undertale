@@ -4040,48 +4040,4 @@ $(document).ready(function() {
       display: none;
     }
   </style>
-  <script>
-    $(document).ready(function() {
-      var tokenajaxSitekey = '6Ld1L6kdAAAAAFKzULwN6HL9mbTmYzi-kxGXwbPe';
-      recaptchaJs($('.js-captcha-form'), '6Ld1L6kdAAAAAFKzULwN6HL9mbTmYzi-kxGXwbPe');
-      Captcha.Init();
-      Captcha.tokenAjaxbtn(tokenajaxSitekey);
-    })
-  </script>
-  <script type="text/javascript">
-    recaptchaJs = function(form, sitekey) {
-      $(form).submit(function (e) {
-        var self = $(this);
-        if ($(form).find('#g_captcha_token').val() == '') {
-          e.preventDefault();
-          grecaptcha(sitekey, function(token) {
-            $(form).find('#g_captcha_token').val(token);
-            $(self).submit();
-          })
-        } else{
-          $('#jspixpa_token_btn').prop('disabled', false);
-          $('.js-submit-loader').hide()
-        }
-      })
-    }
-  </script>
-  <script type="text/javascript">
-    grecaptcha = function(sitekey, closure) {
-      grecaptcha.enterprise.ready(function() {
-        grecaptcha.enterprise.execute(sitekey, {action: 'submit'}).then(function(token) {
-          closure(token);
-        });
-      });
-    }
-
-
-
-
-
-
-
-  </script>
-
-    <script type="text/javascript" src="https://themeassets.pixpa.com/compiled/js/photogallery.js?id=af9e4647c71413f2b8a63264b1f46e55"></script>
-  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fa6bcccdab","applicationID":"752880254","transactionName":"b11UYkdUX0EHVRJbWVYXd1VBXF5cSV4JX1M=","queueTime":0,"applicationTime":1589,"atts":"QxpXFA9OTE8=","errorBeacon":"bam.nr-data.net","agent":""}</script>
-<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-3cvwnn18rxk6" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/enterprise/anchor?ar=1&amp;k=6Ld1L6kdAAAAAFKzULwN6HL9mbTmYzi-kxGXwbPe&amp;co=aHR0cHM6Ly93d3cucmFjaGVsYnVja25lcmFydC5jb206NDQz&amp;hl=es&amp;v=EGbODne6buzpTnWrrBprcfAY&amp;size=invisible&amp;cb=imel6e9cu2hi"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><script type="text/javascript" src="https://d3s2irdjyrlkk2.cloudfront.net/compiled/js/theme-v2-global-store.js"></script><script type="text/javascript" src="https://resources.pixpa.com/assets/newsletter-js/736354/4254229?id=1726676091&amp;host=www.rachelbucknerart.com"></script><script type="text/javascript" src="https://resources.pixpa.com/assets/list-js/736354/4515274?id=1726676091&amp;host=www.rachelbucknerart.com"></script><script type="text/javascript" src="https://resources.pixpa.com/assets/featured-product-js/736354/10381?id=1726676091&amp;host=www.rachelbucknerart.com"></script></body></html>
+ 
