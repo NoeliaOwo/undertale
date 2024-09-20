@@ -1,3 +1,12 @@
 body {
     background-color: mediumpurple;
 }
+.boton {
+    border: none; /* Quitar el borde */
+    background: url('R.png') no-repeat center center; /* Agregar imagen de fondo */
+    background-size: cover; /* Ajustar el tamaño de la imagen */
+    width: 100px; /* Ajustar el ancho del botón */
+    height: 100px; /* Ajustar la altura del botón */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    padding: 0; /* Quitar el padding */
+}
