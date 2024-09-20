@@ -1,48 +1,204 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<section id="intro">
-        <div class="intro-overlay">
-            <div class="background-container">
-                <div class="stars"></div>
-                <div class="twinkling"></div>
-                <div class="clouds"></div>
-            </div>
-        </div>
-        <div class="intro-content">
-            <div class="row">
-                <div class="col-twelve">
-                    <h5>Hello, World.</h5>
-                    <h1 style="font-size: 42px;">Soy Lucía Alfonso.</h1>
-                    <p class="intro-position">
-                        <span>Ingeniería Informática</span>
-                        <span>Tecnología de la Información</span>
-                    </p>
-                    <a class="button stroke smoothscroll" href="#about" title="">Sobre mí</a>
-                    <a dowload="" href="images/CurriculumVitae2020.pdf" title="Descargar CV" target="_blank" class="button stroke">Descargar CV</a>
-          </div>
-        </div>
-      </div>
-      <!-- /intro-content -->
-      <ul class="intro-social">
-        <li>
-          <a href="https://www.linkedin.com/in/luc%C3%ADa-alfonso-garc%C3%ADa-b86981144/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/luciaagarcia" target="_blank"><i class="fa fa-github"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/lucia_agarcia" target="_blank"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/lucia_agarcia/" target="_blank"><i class="fa fa-instagram"></i></a>
-                    </li>
-                    </ul>
-                    <!-- /intro-social -->
-    </section>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucía Alfonso - Ingeniería Informática</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Intro section */
+        #intro {
+            height: 100vh;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+        }
+
+        .intro-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .intro-content {
+            z-index: 2;
+        }
+
+        .intro-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .intro-content h5 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #f0f0f0;
+        }
+
+        .intro-position span {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 25px;
+            margin: 15px;
+            border: 2px solid #fff;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #fff;
+            color: #2a5298;
+        }
+
+        /* Redes sociales */
+        .intro-social {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .intro-social li {
+            margin: 0 10px;
+        }
+
+        .intro-social li a {
+            color: white;
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .intro-social li a:hover {
+            color: #f0f0f0;
+        }
+
+        /* Fondo con estrellas y nubes */
+        .background-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .stars, .twinkling, .clouds {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-repeat: repeat;
+            background-position: center;
+            animation: move 200s linear infinite;
+        }
+
+        .stars {
+            background-image: url('path_to_stars_image.jpg'); /* Cambia esta imagen por una real */
+        }
+
+        .twinkling {
+            background-image: url('path_to_twinkling_image.png'); /* Cambia esta imagen por una real */
+            animation: moveTwinkling 100s linear infinite;
+        }
+
+        .clouds {
+            background-image: url('path_to_clouds_image.png'); /* Cambia esta imagen por una real */
+            animation: moveClouds 300s linear infinite;
+        }
+
+        @keyframes move {
+            from { background-position: 0 0; }
+            to { background-position: 10000px 10000px; }
+        }
+
+        @keyframes moveTwinkling {
+            from { background-position: 0 0; }
+            to { background-position: -10000px -10000px; }
+        }
+
+        @keyframes moveClouds {
+            from { background-position: 0 0; }
+            to { background-position: 10000px 0; }
+        }
+    </style>
 </head>
 <body>
+
+    <section id="intro">
+        <div class="intro-overlay"></div>
+        <div class="background-container">
+            <div class="stars"></div>
+            <div class="twinkling"></div>
+            <div class="clouds"></div>
+        </div>
+        
+        <div class="intro-content">
+            <h5>Hello, World.</h5>
+            <h1>Soy Lucía Alfonso.</h1>
+            <p class="intro-position">
+                <span>Ingeniería Informática</span>
+                <span>Tecnología de la Información</span>
+            </p>
+            <a class="button" href="#about" title="">Sobre mí</a>
+            <a download href="images/CurriculumVitae2020.pdf" title="Descargar CV" target="_blank" class="button">Descargar CV</a>
+        </div>
+
+        <ul class="intro-social">
+            <li><a href="https://www.linkedin.com/in/luc%C3%ADa-alfonso-garc%C3%ADa-b86981144/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/luciaagarcia" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://twitter.com/lucia_agarcia" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/lucia_agarcia/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </section>
+
     <h1>Bienvenidos a mi página web</h1>
     <p>Este es un ejemplo sencillo de una página web alojada en GitHub Pages.</p>
+
 </body>
 </html>
